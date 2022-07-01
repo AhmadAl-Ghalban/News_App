@@ -20,11 +20,13 @@ void main()async {
 
       DioHelpper.init();
     await CacheHelpper.init();
+                    ThemeCubit();
+
           bool? isDark=CacheHelpper.getBoolean(key: 'isDark');
+                NewsCubit();
 
 
       runApp(MyApp(true));
-                NewsCubit();
 
     },
     blocObserver: MyBlocObserver(),
